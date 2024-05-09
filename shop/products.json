@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":"DREAMERS BEANIE",
+        "price": 200,
+        "image": "merch/product_beanie.png"
+    },
+    {
+        "id": 2,
+        "name":"DREAMERS HAT",
+        "price": 250,
+        "image": "merch/product_hat.png"
+    },
+    {
+        "id": 3,
+        "name":"DREAMERS TEE",
+        "price": 290,
+        "image": "merch/product_tshirt.png"
+    },
+    {
+        "id": 4,
+        "name":"SWEET DREAMS PILLOW",
+        "price": 200,
+        "image": "merch/product_pillow.png"
+    },
+    {
+        "id": 5,
+        "name":"DREAMERS TOTEBAG",
+        "price": 300,
+        "image": "merch/product_totebag.png"
+    },
+    {
+        "id": 6,
+        "name":"DREAMERS DRINKWARE",
+        "price": 200,
+        "image": "merch/product_drinkware.png"
+    },
+    {
+        "id": 7,
+        "name":"DREAMERS HOODIE",
+        "price": 200,
+        "image": "merch/product_hoodie.png"
+    },
+    {
+        "id": 8,
+        "name":"DREAMERS SWEATSHIRT",
+        "price": 200,
+        "image": "merch/product_sweatshirt.png"
+    }
+
+]
