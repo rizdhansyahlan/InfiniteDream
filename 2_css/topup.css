@@ -1,0 +1,380 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body{
+    background: #1a0327;
+    font-family: 'Poppins', sans-serif;
+    height: 300vh;
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    background:rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+nav::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.logo{
+    filter: drop-shadow(2px 2px 1px rgba(150, 74, 219, 1));
+    transition: 0.5s all;
+}
+.logo img{
+    height: 20px;
+    display: flex;
+    /*changing black png image to another color using "https://codepen.io/sosuke/pen/Pjoqqp" */
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(187deg) brightness(97%) contrast(101%);
+    transition: 0.5s ease-in-out;
+}
+.logo img:hover{
+    scale: 115%;
+    filter: invert(49%) sepia(42%) saturate(3627%) hue-rotate(237deg) brightness(100%) contrast(87%);
+    transition: 0.8s all;
+}
+.logo:hover{
+    filter: drop-shadow(0 0 3px var(--primaryPurple));
+    transition: 0.8s all;
+}
+
+nav ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+nav li a{
+    font-size: 1rem;
+    color: #9a9898;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all .3s ease;
+}
+
+nav li a:hover{
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
+.hamburger{
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hamburger span{
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+    border-radius: 25px;
+    transition: .3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:rotate(45deg) translateX(11px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:rotate(-45deg) translateX(11px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../4_img/topup/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.content-wrapper{
+    width: 80%;
+    min-height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.content-desc h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.content-desc p{
+    width: 550px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+
+.content-desc span{
+    color: #FEC53A;
+}
+
+.logo-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+
+    height: 20px;
+    display: flex;
+    /*changing black png image to another color using "https://codepen.io/sosuke/pen/Pjoqqp" */
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(187deg) brightness(97%) contrast(101%);
+    transition: 0.5s ease-in-out;
+}
+
+.logo-section .fas{
+    font-size: 6rem;
+    color: #FEC53A;
+}
+
+.logo-section h1{
+    width: 250px;
+    font-size: 3rem;
+    color: #FEC53A;
+    margin-left: 10px;
+}
+
+.logo-section h2{
+    width: 250px;
+    font-size: 1.8rem;
+    color: #FEC53A;
+    margin-left: 10px;
+}
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767),rgba(0, 0, 0, 0.712)),
+    url(../4_img/topup/bg2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+.section-1-wrapper{
+    width: 70%;
+    margin: auto;
+}
+
+.game-categories{
+    width: 70%;
+    margin: 50px auto;
+    position: relative;
+}
+.game-categories h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #FEC53A;
+}
+.game-wrapper{
+    display: flex;
+}
+.gw{
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    margin: 20px 15px 0 0;
+    border-radius: 10px;
+}
+.gw:hover{
+    transform: translateY(-10px);
+}
+.left{
+    position: relative;
+    right: -140px;
+}
+.gw-1{
+    background: url(../4_img/games/mole-1.png);
+    background-size: cover;
+    background-position: center;
+}
+.gw-2{
+    background: url(../4_img/topup/game/AOV.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-3{
+    background: url(../4_img/topup/game/COC.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.gw-4{
+    background: url(../4_img/topup/game/FF.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-5{
+    background: url(../4_img/topup/game/pubg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-6{
+    background: url(../4_img/topup/game/EAFCM.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-7{
+    background: url(../4_img/topup/game/EFootball24.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-8{
+    background: url(../4_img/topup/game/CODM.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-9{
+    background: url(../4_img/topup/game/HSR.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-10{
+    background: url(../4_img/topup/game/genshin-impact.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-11{
+    background: url(../4_img/topup/game/PointBlank.png);
+    background-size: cover;
+    background-position: center;
+}
+.gw-12{
+    background: url(../4_img/topup/game/valo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-13{
+    background: url(../4_img/topup/game/fortnite.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-14{
+    background: url(../4_img/topup/game/apex.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-15{
+    background: url(../4_img/topup/game/hogwarts-legacy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section-3{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../4_img/topup/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.section-3 h1{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+
+.section-3-wrapper{
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback{
+    width: 250px;
+    height: 300px;
+    background: url(../images/feedback.jpg);
+    background-position: center;
+    background-size: cover;
+ 
+}
+.feedback-desc{
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.767);
+    padding: 10px;
+    color: #fff;
+    margin-right: 10px;
+}
+.feedback-desc .far{
+    color: #FEC53A;
+    font-size: 30px;
+}
+.f-img-2{
+    background: url(../images/image9.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* FOoter section */
+.footer-bottom{
+    width: 100%;
+    height: 50px;
+    background: #1B1919;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+.footer-bottom span{
+    color: #FEC53A;
+    font-weight: bold;
+}

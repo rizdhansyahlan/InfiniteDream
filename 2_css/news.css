@@ -1,0 +1,152 @@
+:root{
+    --basePurple :#270e59;
+    --primaryPurple: #592a9c;
+    --secondaryPurple:#964adb;
+    --thirdPurple: #ad69ed;
+}
+
+html{
+  font-family: 'Ubuntu';
+}
+
+.container-lol{
+  margin-top: 90px;
+  max-width: 1200px;
+}
+
+#news{
+  padding: 0 40px;
+}
+
+.heading-1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--basePurple);
+}
+
+.heading-2 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-top: 10px;
+}
+
+.heading-3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: orange ;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  color: var(--secondaryPurple);
+}
+
+.sub-heading p {
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
+.sub-heading span {
+  color: var(--thirdPurple);
+  font-weight: 300;
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+
+.sub-heading .importent {
+  color: orange;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* HOME */
+.homes {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.home-img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+}
+
+#news .list {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#news .list img {
+  width: 100%;
+  height: 60px; 
+}
+
+/* ARTICLE */
+article{
+  margin-top: 100px;
+}
+
+article > p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  columns: 3 25ch;
+  column-gap: 40px;
+  hyphens: auto;
+}
+
+article p:first-child::first-line {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+/* blockquote */
+blockquote {
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+@media (max-width: 950px) {
+  .homes {
+    grid-template-columns: 1fr;
+  }
+
+  #news .lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .right{
+    margin-top: 100px;
+  }
+
+  #news .list {
+    grid-template-columns: 1fr 5fr;
+  }
+
+  .card {
+    margin-bottom: 40px;
+  }
+  article{
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  #news .lists {
+    grid-template-columns: 1fr;
+  }
+}

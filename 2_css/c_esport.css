@@ -1,0 +1,329 @@
+:root{
+    --basePurple :#270e59;
+    --primaryPurple: #592a9c;
+    --secondaryPurple:#964adb;
+    --thirdPurple: #ad69ed;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+    overflow-x: hidden;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    } 
+}
+#back-marq{
+    height: 575px;
+    width: 100vw;
+    position: relative;
+    background-color: var(--basePurple);
+    top: 0;
+}
+.text-marq{
+    margin-top: 200px;
+    margin-left: 60px;
+    width: 100%;
+    position: absolute;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.text-marq h1{
+    font-size: 3rem;
+    font-family: 'Bricolage Grotesque';
+}
+.text-marq p{
+    font-size: 1.5rem;
+    font-family: 'Bricolage Grotesque';
+}
+.img-marq{
+    margin-top: 75px;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.marquee{
+    display: inline-block;
+    animation: 30s slide infinite linear;
+}
+.opacity{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    margin-top: 75px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#main-esport{
+    position: relative;
+    width: 100vw;
+    margin: 0;
+    padding: 0; 
+}
+
+.vision{
+    margin-top: 50px;
+    height: 850px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 10%;
+    gap: 2rem;
+    
+}
+.vision-text h2{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--basePurple);
+    margin-bottom: 1px;
+    border-bottom: 0;
+}
+.vision-text hr{
+    margin-bottom: 45px;
+}
+.vision-text p{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.vision-img {
+    width: 95%;
+    height: auto;
+}
+.vision-img img {
+    width: 100%;
+    height: auto;
+}
+
+.teams{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    margin-top: 50px;
+}
+
+.teams-text{
+    font-family: 'Krona One', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    color: #2B2A4C;
+    margin: 0 0 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #0005;
+}
+
+.teams-img{
+    display:flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.card{
+    width: 280px;
+    height: 400px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover{
+    transform: translateY(-20px);
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 176, 0.5), rgb(214, 64, 64));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.card:hover::before{
+    opacity: 1;
+    z-index: 2;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transition: 0.5s all;
+    width: 280px;
+}
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h1{
+    font-family: 'Krona One', sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.card .info p{
+    font-family: 'Inter', sans-serif;;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.achievement{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    margin-top: 150px;
+}
+
+.ach-text{
+    font-family: 'Krona One', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    color: #2B2A4C;
+    margin: 0 0 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #0005;
+}
+
+.achievement-content{
+    display: flex;
+    gap: 60px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.card-piala{
+    max-width: 100vw;
+    border: 1px solid grey;
+    padding: 40px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s all;
+}
+
+.card-piala:hover{
+    transform: translateY(-5px);
+}
+
+.card-piala img{
+    height: 100px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.ach-img-name{
+    margin-top: 10px;
+}
+
+.ach-img-name h4{
+    margin: 25px 0;
+    font-family: 'Bricolage Grotesque';
+    font-size: 1.1rem;
+    pointer-events: none ;
+}
+
+.ach-img-name p{
+    font-family: 'Ubuntu';
+    color: grey;
+    pointer-events: none ;
+    margin-top: 4px;
+}
+
+/*RESPONSIVE MEDIA*/
+@media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .vision {
+      grid-template-columns: 1fr; /* Change to a single column on smaller screens */
+      gap: 1rem;
+      height: auto; /* Adjust height as needed */
+    }
+  
+    .vision-text {
+      text-align: center;
+      padding: 0 1rem;
+    }
+  
+    .vision-img {
+      margin-top: 20px;
+    }
+  
+    .teams {
+      padding: 0 5%; /* Adjust padding for smaller screens */
+    }
+  
+    .teams-img {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%; /* Cards take up full width on smaller screens */
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .achievement {
+      padding: 0 5%; /* Adjust padding for smaller screens */
+    }
+  
+    .achievement-content {
+      flex-direction: column; /* Stack achievements vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .card-piala {
+      width: 100%; /* Achievements take up full width on smaller screens */
+      margin-bottom: 20px;
+    }
+
+
+  }

@@ -1,0 +1,212 @@
+:root{
+    --basePurple :#270e59;
+    --primaryPurple: #592a9c;
+    --secondaryPurple:#964adb;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+nav::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.logo{
+    filter: drop-shadow(2px 2px 1px rgba(150, 74, 219, 1));
+    transition: 0.5s all;
+}
+.logo img{
+    height: 20px;
+    display: flex;
+    /*changing black png image to another color using "https://codepen.io/sosuke/pen/Pjoqqp" */
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(187deg) brightness(97%) contrast(101%);
+    transition: 0.5s ease-in-out;
+}
+.logo img:hover{
+    scale: 115%;
+    filter: invert(49%) sepia(42%) saturate(3627%) hue-rotate(237deg) brightness(100%) contrast(87%);
+    transition: 0.8s all;
+}
+.logo:hover{
+    filter: drop-shadow(0 0 3px var(--primaryPurple));
+    transition: 0.8s all;
+}
+
+nav ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+nav li a{
+    font-size: 1rem;
+    color: #9a9898;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all .3s ease;
+}
+
+nav li a:hover{
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
+/* https://uiverse.io/mrhyddenn/stale-cheetah-42 */
+#openPopup button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--primaryPurple);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+  
+#openPopup button:hover {
+    background: var(--primaryPurple);
+    box-shadow: 0 0 15px 3px var(--secondaryPurple);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+  
+#openPopup button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+  
+#openPopup button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+  
+@keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+}
+
+#openPopup button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+  
+
+.hamburger{
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hamburger span{
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+    border-radius: 25px;
+    transition: .3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:rotate(45deg) translateX(11px);
+}
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3){
+    transform:rotate(-45deg) translateX(11px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1);
+}
+
+
+
+
+/*RESPONSIVE MEDIA*/
+
+/*1024px media*/
+@media screen and (max-width:1024px) {
+    .hamburger{
+        display: flex;
+    }
+
+    nav ul{
+        position: fixed;
+        right: 0;
+        top: 55px;
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        justify-content: space-evenly;
+        flex-direction: column;
+        transform: translateY(-100vh);
+        transition: all 0.3s;
+    }
+
+    nav ul.slide{
+        transform: translateY(0);
+    }
+}
