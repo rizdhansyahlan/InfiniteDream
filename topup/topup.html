@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="topup.css">
+    <link rel="stylesheet" href="footer.css">
+    <script language='JavaScript'>
+        var txt=" | Topup Store | Infinite Dream ";
+        var speed=500;
+        var refresh=null;
+        function action() { document.title=txt;
+        txt=txt.substring(1,txt.length)+txt.charAt(0);
+        refresh=setTimeout("action()",speed);}action();
+        </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../1_html/a_home.php">
+                    <img src="../4_img/logo-navbar.png">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#container">HOME</a></li>
+                <li><a href="#logo-section">TOPUP</a></li>
+                <li><a href="../1_html/e_contact-us.php">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container" id="container">
+        <div class="content-wrapper">
+            <div class="content-desc">
+                <h1>INFINITE DREAM STORE</h1>
+                <p><span>TOP UP GAMES</span> on our gaming store and be the 
+                    winner off all time.</p>
+                <p>Our Top Players in <span>INFINITE DREAM COMMUNITY</span> are waiting for your challenge, click the 
+                    button below to get started.</p>
+            </div>
+            <div class="banner">
+                <img src = "../4_img/top-up-back.png" width="512px">
+            </div>
+        </div>
+    </div>
+    <div class="logo-section" id="logo-section">
+        <img src="../4_img/logo-navbar.png" width="250px"><h1>TOPUP</h1>
+    </div>
+    <section class="section-1" >
+        <div class="section-1-wrapper"> 
+            <br>
+            <div class="game-wrapper left">
+                <a href="form.php"><div class="gw gw-1"></div></a>
+                <a href="form.php"><div class="gw gw-2"></div></a>
+                <a href="form.php"><div class="gw gw-3"></div></a>
+                <a href="form.php"><div class="gw gw-4"></div></a>
+                <a href="form.php"><div class="gw gw-5"></div></a>
+            </div>
+            <div class="game-wrapper left">
+                <a href="form.php"><div class="gw gw-6"></div></a>
+                <a href="form.php"><div class="gw gw-7"></div></a>
+                <a href="form.php"><div class="gw gw-8"></div></a>
+                <a href="form.php"><div class="gw gw-9"></div></a>
+                <a href="form.php"><div class="gw gw-10"></div></a>
+            </div>
+            <div class="game-wrapper left">
+                <a href="form.php"><div class="gw gw-11"></div></a>
+                <a href="form.php"><div class="gw gw-12"></div></a>
+                <a href="form.php"><div class="gw gw-13"></div></a>
+                <a href="form.php"><div class="gw gw-14"></div></a>
+                <a href="form.php"><div class="gw gw-15"></div></a>
+            </div>
+        </div>
+    </section>
+    <div class="logo-section-2"><h2>OUR TOP PLAYERS</h2></div>
+    <div class="section-3">
+        <div class="section-3-wrapper">
+            <div class="feed">
+                <div class="feedback"></div>
+                <div class="feedback-desc">
+                    <p>Hope is what makes us strong. It is why we are here. It is what we fight with when all else is lost.</p>
+                    <br>
+                    <h4>KT</h4>
+                </div>
+            </div>
+            <!-- =========================== -->
+            <div class="feed">
+                <div class="feedback f-img-2"></div>
+                <div class="feedback-desc">
+                    <p>Just play and find yourself.</p>
+                    <br>
+                    <h4>AERISH</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2023 Infinite Dream. All Rights Reserved</p>
+    </div>
+</body>
+</html>
